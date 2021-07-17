@@ -78,9 +78,13 @@ class App extends React.Component {
       notes_list: notes_list ? notes_list : [],
       trash_list: trash_list ? trash_list : [],
     });
-    this.setState({
-      pageCount: Math.ceil(notes_list.length / this.state.perPage),
-    });
+    if (notes_list) {
+      this.setState({
+        pageCount: Math.ceil(notes_list.length / this.state.perPage),
+      });
+    } else {
+      this.setState({ pageCount: 0 });
+    }
   }
 
   handleClick() {
@@ -138,10 +142,10 @@ class App extends React.Component {
       localStorage.setItem('list', JSON.stringify(notes_list));
     } else {
       return alert('Invalid data');
-      this.setState({
-        ...this.state,
-        visible: false,
-      });
+      // this.setState({
+      //   ...this.state,
+      //   visible: false,
+      // });
     }
   }
   removeFromNotes(i, id) {
@@ -241,42 +245,23 @@ class App extends React.Component {
     var Attainu_total = 0;
     var Daily_total = 0;
     // var list = this.state.notes_list
-    notes_list.forEach((e) => {
-      if (
-        e.tag === 'Coding' &&
-        (e.status === 'InProgress' || e.status === 'Backlog')
-      ) {
-        Coding_total += 1;
-      } else if (
-        e.tag === 'Work' &&
-        (e.status === 'InProgress' || e.status === 'Backlog')
-      ) {
-        Work_total += 1;
-      } else if (
-        e.tag === 'Casual' &&
-        (e.status === 'InProgress' || e.status === 'Backlog')
-      ) {
-        Casual_total += 1;
-      } else if (
-        e.tag === 'Attainu' &&
-        (e.status === 'InProgress' || e.status === 'Backlog')
-      ) {
-        Attainu_total += 1;
-      } else if (
-        e.tag === 'Daily' &&
-        (e.status === 'InProgress' || e.status === 'Backlog')
-      ) {
-        Daily_total += 1;
-      }
-    });
+    {
+      notes_list &&
+        notes_list.forEach((e) => {
+          if (e.tag === 'Coding') {
+            Coding_total += 1;
+          } else if (e.tag === 'Work') {
+            Work_total += 1;
+          } else if (e.tag === 'Casual') {
+            Casual_total += 1;
+          } else if (e.tag === 'Attainu') {
+            Attainu_total += 1;
+          } else if (e.tag === 'Daily') {
+            Daily_total += 1;
+          }
+        });
+    }
 
-    console.log(
-      Work_total,
-      Coding_total,
-      Attainu_total,
-      Casual_total,
-      Daily_total
-    );
     return (
       <div>
         <div className='header'>
@@ -290,7 +275,7 @@ class App extends React.Component {
             onChange={(e) => this.handleSearch(e.target.value)}
           />
         </div>
-        <hr></hr>
+
         <div className='content'>
           <Router>
             <div className='navigation'>

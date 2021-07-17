@@ -1,30 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
-body{
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap");
+body {
   margin: 0;
-  padding:0
+  padding: 0;
+  background-color: slateblue !important;
 }
-.header{
+.header {
   display: grid;
   grid-template-columns: auto auto 1fr;
   grid-gap: 15px;
   align-items: start;
-  padding-left: 30px;
-  padding-right: 100px;
-  margin-bottom: 0px;
-  margin-top: 2px;
-  padding-top: 0px;
-  padding-bottom:0px;
-  margin-bottom: 0px;
-  height: 50px;
-  background-color: slateblue;
+  padding: 6px 50px;
+  background-color: rgb(15, 3, 97);
 }
-.header img{
+.header img {
   height: 38px;
   width: 28px;
   padding-top: 8px;
 }
-.header h3{
-  font-family: 'Quicksand', sans-serif;
+.header h3 {
+  font-family: "Quicksand", sans-serif;
   font-size: 20px;
   color: #808080;
   font-weight: 550;
@@ -32,13 +26,13 @@ body{
   padding-top: 15px;
   color: springgreen;
 }
-.search{
+.search {
   height: 42px;
   width: 900px;
   border-style: none;
   border-radius: 10px;
   background-color: #ededed;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 15px;
   font-weight: 500;
   color: #808080;
@@ -46,28 +40,27 @@ body{
   margin-left: 70px;
   margin-top: 5px;
 }
-.search:focus{
+.search:focus {
   outline: none;
   background-color: white;
-  box-shadow: 2px 2px 5px 2px rgba(201,199,199,0.8);
+  box-shadow: 2px 2px 5px 2px rgba(201, 199, 199, 0.8);
 }
-.content{
+.content {
   display: grid;
   grid-template-columns: auto 1fr;
-  background-color: slateblue;
 }
 
-.navigation{
-  
-  padding:10px;
+.navigation {
+  padding: 10px;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   grid-template-rows: auto auto;
   height: 100px;
   grid-gap: 0px;
   align-items: space-between;
 }
-.nav-home, .nav-trash{
+.nav-home,
+.nav-trash {
   margin-top: 34px;
   margin-bottom: 18px;
   background-color: white;
@@ -80,7 +73,7 @@ body{
   margin-left: 10px;
   background-color: springgreen;
 }
-.home{
+.home {
   height: 20px;
   width: 20px;
   padding-left: 4px;
@@ -90,7 +83,7 @@ body{
   padding-left: 7px;
   margin-bottom: inherit;
 }
-.trash{
+.trash {
   height: 20px;
   width: 20px;
   opacity: 0.8;
@@ -98,16 +91,18 @@ body{
   padding-left: 6px;
   margin-bottom: inherit;
 }
-.nav-home:hover, .nav-trash:hover{
+.nav-home:hover,
+.nav-trash:hover {
   background-color: #feefc3;
 }
-.nav-home:focus,.nav-trash:focus{
+.nav-home:focus,
+.nav-trash:focus {
   outline: none;
 }
-.nav-home:active{
+.nav-home:active {
   background-color: #feefc3;
 }
-.take-notes1{
+.take-notes1 {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -116,51 +111,51 @@ body{
   grid-gap: 10px;
   border-style: none;
   border-radius: 6px;
-  box-shadow: 2px 2px 4px 2px rgba(201,199,199,0.8);
+  box-shadow: 2px 2px 4px 2px rgba(201, 199, 199, 0.8);
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
   width: 600px;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 15px;
-  color:#808080;
+  color: #808080;
 }
-.take-notes1 input{
+.take-notes1 input {
   font-weight: 800;
 }
-.take-notes1:focus{
+.take-notes1:focus {
   outline: none;
 }
-.take-notes1 button{
+.take-notes1 button {
   height: 32px;
-  width:32px;
+  width: 32px;
   border-radius: 50%;
   padding-top: 5px;
   border-style: none;
   background-color: white;
   outline: none;
 }
-.take-notes1 button:hover{
-  background-color: rgb(240, 238, 238); 
+.take-notes1 button:hover {
+  background-color: rgb(240, 238, 238);
 }
-.icon{
+.icon {
   height: 14px;
   width: 14px;
   justify-self: center;
-  opacity:80%;
+  opacity: 80%;
 }
-.initial{
-  font-family: 'Quicksand', sans-serif;
+.initial {
+  font-family: "Quicksand", sans-serif;
   font-size: 15px;
   font-weight: 600;
-  color:#808080;
+  color: #808080;
   border-style: none;
 }
-.initial:focus{
-  outline:none;
+.initial:focus {
+  outline: none;
 }
-.take-notes2{
+.take-notes2 {
   margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
@@ -169,40 +164,41 @@ body{
   grid-gap: 15px;
   border-style: none;
   border-radius: 6px;
-  box-shadow: 2px 2px 10px 2px rgba(201,199,199,0.8);
+  box-shadow: 2px 2px 10px 2px rgba(201, 199, 199, 0.8);
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
   width: 600px;
 }
-.title, .take-note{
+.title,
+.take-note {
   border-style: none;
   border-radius: 12px;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 15px;
   font-weight: 600;
-  color:#808080;
+  color: #808080;
   padding-left: 10px;
   padding-right: 10px;
 }
-.title:focus{
+.title:focus {
   outline: none;
 }
-.take-note:focus{
+.take-note:focus {
   outline: none;
 }
-.take-notes2 button{
+.take-notes2 button {
   border-style: none;
   background-color: white;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 15px;
-  font-weight:600;
-  color:#808080;
+  font-weight: 600;
+  color: #808080;
   width: 50px;
   justify-self: end;
 }
-.take-notes2 button:focus{
+.take-notes2 button:focus {
   outline: none;
 }
 .my-masonry-grid {
@@ -210,7 +206,7 @@ body{
   display: -ms-flexbox; /* Not needed if autoprefixing */
   display: flex;
   margin-left: 70px;
-  margin-right:50px;
+  margin-right: 50px;
   margin-top: 80px; /* gutter size offset */
   width: auto;
   height: auto;
@@ -218,7 +214,7 @@ body{
 .my-masonry-grid_column {
   padding-left: 20px; /* gutter size */
 }
-.list-item{
+.list-item {
   border-style: solid;
   border-width: thin;
   border-color: rgba(214, 214, 214, 0.8);
@@ -226,26 +222,25 @@ body{
   display: grid;
   grid-template-rows: auto auto auto auto;
   grid-gap: 10px;
-  background-color: #e4e2e2;;
-  font-family: 'Quicksand', sans-serif;
+  background-color: #e4e2e2;
+  font-family: "Quicksand", sans-serif;
   font-size: 15px;
-  font-weight:600;
+  font-weight: 600;
   width: 200px;
   padding-left: 11px;
-  padding-right:11px;
+  padding-right: 11px;
   padding-top: 8px;
   padding-bottom: 8px;
   margin-bottom: 20px;
-
 }
-.pin-button{
+.pin-button {
   display: none;
   background-color: white;
 }
-.list-item:hover .pin-button{
+.list-item:hover .pin-button {
   display: block;
   height: 32px;
-  width:32px;
+  width: 32px;
   border-radius: 50%;
   padding-top: 5px;
   border-style: none;
@@ -254,17 +249,17 @@ body{
   padding-left: 4px;
   padding-right: 4px;
 }
-.pin-button:hover{
+.pin-button:hover {
   background-color: rgb(233, 229, 229);
 }
 
-.list-button{
+.list-button {
   border-style: none;
   background-color: white;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 15px;
-  font-weight:600;
-  color:#808080;
+  font-weight: 600;
+  color: #808080;
   width: auto;
   display: flow-root;
   margin-bottom: 8px;
@@ -274,89 +269,89 @@ body{
   padding-right: 4px;
   background-color: aqua;
 }
-.list-item:hover{
+.list-item:hover {
   box-shadow: 1px 1px 3px 2px rgba(223, 222, 222, 0.8);
   border-style: none;
 }
 
-.list-button:focus{
+.list-button:focus {
   outline: none;
 }
-.pin-button:focus{
+.pin-button:focus {
   outline: none;
 }
-.list-button:hover{
+.list-button:hover {
   background-color: black;
   color: white;
   border-radius: 5px;
 }
-.span1{
+.span1 {
   display: grid;
   grid-template-columns: 1fr auto;
-  font-weight:700;
+  font-weight: 700;
   font-size: 20px;
-  color:hsl(0, 0%, 49%);
+  color: hsl(0, 0%, 49%);
   width: auto;
   word-break: break-all;
   height: 35px;
 }
-.span1:focus{
+.span1:focus {
   outline: none;
 }
-.span2{
-  width:auto;
+.span2 {
+  width: auto;
   word-break: break-all;
   overflow-wrap: break-word;
-  color:#9c9a9a;
+  color: #9c9a9a;
 }
-.span2:focus{
+.span2:focus {
   outline: none;
 }
 
-.pin{
+.pin {
   height: 20px;
   width: 20px;
   justify-self: center;
-  opacity:0.7;
+  opacity: 0.7;
 }
-.pinned{
+.pinned {
   margin-left: 180px;
   margin-right: 180px;
   margin-top: 50px;
 }
-.pinned h4{
-  font-family: 'Quicksand', sans-serif;
+.pinned h4 {
+  font-family: "Quicksand", sans-serif;
   font-size: 20px;
-  font-weight:600;
-  color:#160303;
+  font-weight: 600;
+  color: #160303;
   margin-left: 10px;
   margin-bottom: 6px;
 }
 
-#li{
+#li {
   animation-name: up;
-  animation-duration: .2s;
+  animation-duration: 0.2s;
 }
-@keyframes up{
-  0%{
-      transform: translateY(50px);
-      opacity: 0%;
+@keyframes up {
+  0% {
+    transform: translateY(50px);
+    opacity: 0%;
   }
-  100%{
-      transform: translateY(0px); 
-      opacity: 100%;
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
   }
 }
-.popup{
-  z-index:10;
+.popup {
+  z-index: 10;
   position: absolute;
   top: 0;
   left: 0;
-  background-color:rgba(56, 55, 55, 0.6);
+  background-color: rgba(56, 55, 55, 0.6);
   height: 150vh;
   width: 100%;
 }
-.text{
+.text {
   height: 200px;
   width: 550px;
   display: grid;
@@ -372,20 +367,20 @@ body{
   padding-bottom: 12px;
   padding-top: 10px;
 }
-@keyframes pop{
-  0%{
-      transform: translateZ(-20px) scaleX(0) scaleY(0) ;
-      opacity: 0%;
+@keyframes pop {
+  0% {
+    transform: translateZ(-20px) scaleX(0) scaleY(0);
+    opacity: 0%;
   }
-  100%{
-    transform: translateZ(0px) scaleX(1) scaleY(1) ;
+  100% {
+    transform: translateZ(0px) scaleX(1) scaleY(1);
     opacity: 100%;
   }
 }
-.edit-title{
-  font-weight:700;
+.edit-title {
+  font-weight: 700;
   font-size: 20px;
-  color:hsl(0, 1%, 36%);
+  color: hsl(0, 1%, 36%);
   border-style: none;
   width: auto;
   word-break: break-all;
@@ -394,53 +389,54 @@ body{
   padding-left: 15px;
   padding-right: 15px;
 }
-.edit-title input{
-  font-family: 'Quicksand', sans-serif;
-  font-weight:700;
+.edit-title input {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
   font-size: 22px;
-  color:hsl(0, 1%, 36%);
+  color: hsl(0, 1%, 36%);
   border-style: none;
   width: auto;
   word-break: break-all;
 }
-.edit-title button{
+.edit-title button {
   align-self: center;
   justify-self: end;
   background-color: white;
   border-radius: 50%;
   border-style: none;
   height: 32px;
-  width:32px;
+  width: 32px;
 }
-.edit-title button:hover{
+.edit-title button:hover {
   background-color: rgb(233, 229, 229);
 }
-.edit-input{
-  font-family: 'Quicksand', sans-serif;
-  font-weight:600;
+.edit-input {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
   font-size: 15px;
-  width:450px;
+  width: 450px;
   border-style: none;
   word-break: break-all;
   overflow-wrap: break-word;
-  color:#646464;
+  color: #646464;
   padding-left: 18px;
   padding-right: 15px;
 }
-.edit-input:focus{
-  outline:none;
-}
-.edit-title input:focus{
+.edit-input:focus {
   outline: none;
 }
-.close, .delete{
+.edit-title input:focus {
+  outline: none;
+}
+.close,
+.delete {
   margin-right: 12px;
   border-style: none;
   background-color: white;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 16px;
-  font-weight:600;
-  color:#808080;
+  font-weight: 600;
+  color: #808080;
   width: 60px;
   justify-self: end;
   align-self: flex-end;
@@ -448,11 +444,12 @@ body{
   padding-right: 4px;
   border-radius: 5px;
 }
-.close:hover, .delete:hover{
+.close:hover,
+.delete:hover {
   background-color: black;
   color: white;
 }
-.trash-item{
+.trash-item {
   border-style: solid;
   border-width: thin;
   border-color: rgba(214, 214, 214, 0.8);
@@ -461,21 +458,21 @@ body{
   grid-template-rows: auto auto auto;
   grid-gap: 20px;
   background-color: white;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 15px;
-  font-weight:600;
+  font-weight: 600;
   width: 200px;
   padding-left: 11px;
-  padding-right:11px;
+  padding-right: 11px;
   padding-top: 8px;
   padding-bottom: 8px;
   margin-bottom: 20px;
 }
-.trash-item:hover{
-    box-shadow: 1px 1px 3px 2px rgba(223, 222, 222, 0.8);
-    border-style: none;
+.trash-item:hover {
+  box-shadow: 1px 1px 3px 2px rgba(223, 222, 222, 0.8);
+  border-style: none;
 }
-.delete-forever{
+.delete-forever {
   display: none;
   height: 32px;
   width: 32px;
@@ -485,58 +482,67 @@ body{
   margin-left: auto;
   margin-right: auto;
 }
-.trash-item:hover .delete-forever{
+.trash-item:hover .delete-forever {
   display: block;
 }
 .delete-forever:hover {
   background-color: #e4e2e2;
 }
-.delete-forever:focus{
+.delete-forever:focus {
   outline: none;
 }
-.del-forever{
+.del-forever {
   height: 18px;
   width: 18px;
   padding-left: 3px;
-}.pagination {
+}
+.pagination {
   margin: 15px auto;
   display: flex;
   list-style: none;
   outline: none;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
 }
-.pagination > .active > a{
-  background-color: #47ccde ;
-  border-color: #47ccde ;
+.pagination > .active > a {
+  background-color: #47ccde;
+  border-color: #47ccde;
   color: #fff;
 }
-.pagination > li > a{
-  border: 1px solid #47ccde ;
+.pagination > li > a {
+  border: 1px solid #47ccde;
   padding: 5px 10px;
   outline: none;
   cursor: pointer;
 }
-.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
-  background-color: #47ccde ;
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #47ccde;
   border-color: #47ccde;
-  outline: none ;
+  outline: none;
 }
-.pagination > li > a, .pagination > li > span{
-  color: #47ccde
+.pagination > li > a,
+.pagination > li > span {
+  color: #47ccde;
 }
-.pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{
-  border-radius: unset
+.pagination > li:first-child > a,
+.pagination > li:first-child > span,
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-radius: unset;
 }
-#top{
-  display:flex;
+#top {
+  display: flex;
   margin-top: 4rem;
   margin-bottom: 1em;
 }
 
-p{
+p {
   font-size: 24px;
-  
 }
 
 @media (max-width: 767px) {
