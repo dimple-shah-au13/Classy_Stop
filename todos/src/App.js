@@ -1,28 +1,28 @@
-import React from 'react';
-import Home from './Home';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Trash from './Trash';
+import React from "react";
+import Home from "./Home";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Trash from "./Trash";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      search: null,
+      search: "",
       edited_note: {
-        title: '',
-        input: '',
-        status: '',
+        title: "",
+        input: "",
+        status: "",
       },
       notes: {
-        title: '',
-        input: '',
-        tag: '',
-        status: '',
-        dueDate: '2021-07-12',
+        title: "",
+        input: "",
+        tag: "",
+        status: "",
+        dueDate: "2021-07-12",
       },
       deleted_note: {
-        title: '',
-        input: '',
+        title: "",
+        input: "",
       },
       search_list: [],
       notes_list: [],
@@ -59,19 +59,11 @@ class App extends React.Component {
       handlePageClick: this.handlePageClick,
     };
   }
-  handlePageClick = (e) => {
-    const selectedPage = e.selected;
-    const offset = selectedPage * this.state.perPage;
 
-    this.setState({
-      currentPage: selectedPage,
-      offset: offset,
-    });
-  };
   componentDidMount() {
-    const trash_string = localStorage.getItem('trash');
+    const trash_string = localStorage.getItem("trash");
     const trash_list = JSON.parse(trash_string);
-    const list_string = localStorage.getItem('list');
+    const list_string = localStorage.getItem("list");
     const notes_list = JSON.parse(list_string);
     this.setState({
       ...this.state,
@@ -86,6 +78,16 @@ class App extends React.Component {
       this.setState({ pageCount: 0 });
     }
   }
+
+  handlePageClick = (e) => {
+    const selectedPage = e.selected;
+    const offset = selectedPage * this.state.perPage;
+
+    this.setState({
+      currentPage: selectedPage,
+      offset: offset,
+    });
+  };
 
   handleClick() {
     this.setState({
@@ -105,12 +107,12 @@ class App extends React.Component {
     } else {
       this.setState({
         ...this.state,
-        search: null,
+        search: "",
         search_list: [],
       });
     }
   }
-  handleChangeNote(value, key, obj = 'notes') {
+  handleChangeNote(value, key, obj = "notes") {
     this.setState({
       ...this.state,
       [obj]: {
@@ -134,14 +136,14 @@ class App extends React.Component {
         notes_list: notes_list,
         notes: {
           ...this.state.notes,
-          title: '',
-          input: '',
+          title: "",
+          input: "",
         },
         visible: false,
       });
-      localStorage.setItem('list', JSON.stringify(notes_list));
+      localStorage.setItem("list", JSON.stringify(notes_list));
     } else {
-      return alert('Invalid data');
+      return alert("Invalid title and note length");
       // this.setState({
       //   ...this.state,
       //   visible: false,
@@ -171,8 +173,8 @@ class App extends React.Component {
         notes_list: notes_list,
       });
     }
-    localStorage.setItem('list', JSON.stringify(notes_list));
-    localStorage.setItem('trash', JSON.stringify(trash_list));
+    localStorage.setItem("list", JSON.stringify(notes_list));
+    localStorage.setItem("trash", JSON.stringify(trash_list));
   }
   pinNote(id) {
     this.setState({
@@ -209,9 +211,9 @@ class App extends React.Component {
             ...this.state.notes_list.filter((item) => item.id !== id),
           ],
       edited_note: {
-        title: '',
-        input: '',
-        status: '',
+        title: "",
+        input: "",
+        status: "",
       },
       showPopUp: false,
       popUp_id: null,
@@ -230,13 +232,13 @@ class App extends React.Component {
   render() {
     let styles = {
       inputStyle: {
-        display: 'flex',
+        display: "flex",
       },
       inputStyle1: {
-        display: 'none',
+        display: "none",
       },
     };
-    const list_string = localStorage.getItem('list');
+    const list_string = localStorage.getItem("list");
     const notes_list = JSON.parse(list_string);
 
     var Coding_total = 0;
@@ -244,49 +246,51 @@ class App extends React.Component {
     var Casual_total = 0;
     var Attainu_total = 0;
     var Daily_total = 0;
-    // var list = this.state.notes_list
-    {
-      notes_list &&
-        notes_list.forEach((e) => {
-          if (e.tag === 'Coding') {
-            Coding_total += 1;
-          } else if (e.tag === 'Work') {
-            Work_total += 1;
-          } else if (e.tag === 'Casual') {
-            Casual_total += 1;
-          } else if (e.tag === 'Attainu') {
-            Attainu_total += 1;
-          } else if (e.tag === 'Daily') {
-            Daily_total += 1;
-          }
-        });
+
+    if (notes_list) {
+      notes_list.forEach((e) => {
+        if (e.tag === "Coding") {
+          Coding_total += 1;
+        } else if (e.tag === "Work") {
+          Work_total += 1;
+        } else if (e.tag === "Casual") {
+          Casual_total += 1;
+        } else if (e.tag === "Attainu") {
+          Attainu_total += 1;
+        } else if (e.tag === "Daily") {
+          Daily_total += 1;
+        }
+      });
     }
 
     return (
       <div>
-        <div className='header'>
-          <img src='./logo.png' />
-          <h3>TodoList</h3>
+        <div className="header">
+          <img alt="" src="./logo.png" />
+          <a href="/">
+            <h3>TodoList</h3>
+          </a>
+
           <input
-            className='search'
-            type='text'
-            placeholder='Search'
-            value={this.state.search ? this.state.search : ''}
+            className="search"
+            type="text"
+            placeholder="Search"
+            value={this.state.search}
             onChange={(e) => this.handleSearch(e.target.value)}
           />
         </div>
 
-        <div className='content'>
+        <div className="content">
           <Router>
-            <div className='navigation'>
-              <Link to='/' className='nav-home'>
-                <img alt='home' className='home' src='./note.png' /> Dashboard
+            <div className="navigation">
+              <Link to="/" className="nav-home">
+                <img alt="home" className="home" src="./note.png" /> Dashboard
               </Link>
-              <Link to='/trash' className='nav-trash'>
-                <img alt='trash' className='trash' src='./del.png' />
+              <Link to="/trash" className="nav-trash">
+                <img alt="trash" className="trash" src="./del.png" />
                 Trash
               </Link>
-              <div className='top'>
+              <div className="top">
                 <p>
                   Total Coding tasks {Coding_total}
                   <br></br>
@@ -304,13 +308,13 @@ class App extends React.Component {
             <Switch>
               <Route
                 exact
-                path='/'
+                path="/"
                 render={() => (
                   <Home state={this.state} styles={styles} {...this.actions} />
                 )}
               />
               <Route
-                path='/trash'
+                path="/trash"
                 render={() => (
                   <Trash state={this.state} styles={styles} {...this.actions} />
                 )}

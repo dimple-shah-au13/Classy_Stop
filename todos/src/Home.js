@@ -16,10 +16,7 @@ const PinnedNote = ({ state, removeFromNotes, removePin }) => {
             <p key={index} className="list-item" id="li">
               <span className="span1">
                 {item.title}{" "}
-                <button
-                  className="pin-button"
-                  onClick={(e) => removePin(item.id)}
-                >
+                <button className="pin-button" onClick={(e) => removePin()}>
                   <img className="pin" src="./push-pin.png" />
                 </button>
               </span>
@@ -100,13 +97,13 @@ const Home = ({ state, styles, ...actions }) => {
               onClick={(e) => actions.updateNote(state.popUp_id)}
               className="close"
             >
-              close
+              Update
             </button>
             <button
               onClick={(e) => actions.removeFromNotes(state.popUp_id)}
               className="delete"
             >
-              delete
+              Delete
             </button>
           </p>
         </div>
